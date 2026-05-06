@@ -1,0 +1,13 @@
+name: Wake up brothers-memory
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Каждый час в 0 минут
+  workflow_dispatch:      # Чтобы можно было запустить вручную
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Space
+        run: curl -I -s https://Agastiyar-brothers-memory.hf.space
